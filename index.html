@@ -6,7 +6,6 @@
     <link rel="icon" href="brick.png" type="image/png" />
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@600&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
@@ -26,11 +25,32 @@
 			</a>
 		</div>
 
-			<font style="color: gray; font-size: 15px;">Contact Mail: brickhubapp@gmail.com</font>
+			<font style="color: gray; font-size: 15px;">Support contact: brickhubapp@gmail.com</font>
 			</br>
 			<font style="color: gray; font-size: 15px;">2025 &copy; BrickHub All Rights Reserved.</font>
 
 	</center>
+
+	<script>
+        function redirectToAppStore() {
+            window.location.href = "https://apps.apple.com/app/brickhub/id6502918957";
+        }
+
+        function redirectToGooglePlay() {
+            window.location.href = "https://play.google.com/store/apps/details?id=com.baranbaltaci.brickhub";
+        }
+
+        function detectOS() {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            if (/android/i.test(userAgent)) {
+                redirectToGooglePlay();
+            } else if (/iPad|iPhone|iPod/i.test(userAgent) && !window.MSStream) {
+                redirectToAppStore();
+            } else {
+            }
+        }
+        detectOS();
+    </script>
 	
 </body>
 </html>
